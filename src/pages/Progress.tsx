@@ -200,34 +200,28 @@ const Progress = () => {
               <CardDescription>
                 <div className="flex justify-between items-center">
                   <span>Your daily progress over time</span>
-                  <div className="flex space-x-1">
+                  <Tabs value={selectedPeriod} onValueChange={setSelectedPeriod} className="w-auto">
                     <TabsList className="h-8">
                       <TabsTrigger 
                         className="text-xs h-8 px-2" 
                         value="week"
-                        onClick={() => setSelectedPeriod('week')}
-                        data-state={selectedPeriod === 'week' ? "active" : ""}
                       >
                         Week
                       </TabsTrigger>
                       <TabsTrigger 
                         className="text-xs h-8 px-2" 
                         value="month"
-                        onClick={() => setSelectedPeriod('month')}
-                        data-state={selectedPeriod === 'month' ? "active" : ""}
                       >
                         Month
                       </TabsTrigger>
                       <TabsTrigger 
                         className="text-xs h-8 px-2" 
                         value="quarter"
-                        onClick={() => setSelectedPeriod('quarter')}
-                        data-state={selectedPeriod === 'quarter' ? "active" : ""}
                       >
                         3 Months
                       </TabsTrigger>
                     </TabsList>
-                  </div>
+                  </Tabs>
                 </div>
               </CardDescription>
             </CardHeader>
